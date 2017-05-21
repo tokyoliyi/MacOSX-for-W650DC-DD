@@ -39,8 +39,7 @@ Disable GTX950m
 Fix instant wake
 + [usb] USB3 _PRW 0x0D Skylake (instant wake)
 ### FN Brightness key patch
-'''
-
+<pre><code>
 into method label _Q12 parent_label EC replace_content
 begin
                     Store (0x12, P80H)
@@ -57,8 +56,7 @@ begin
 
                     Store (0x02, OEM2)
 end;
-
-'''
+</pre></code>
 ## Notice
 + You need to generate and patch DSDT by yourself
 + Use ssdtPRGen.sh to generate SSDT for your CPU
