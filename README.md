@@ -55,8 +55,9 @@ end;
 ## Not Working
 + mic 
 + wifi
-
-
+## Credit
++ APPLE for mac os
++ RehabMan for everything
 
 
 
