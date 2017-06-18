@@ -9,10 +9,10 @@ For sound card
 + AppleALC.kext with  layout id 28
 
 For Intel graphics
-+ FakePCIID_Intel_HD_Graphics.kext FakePCIID.kext IntelGraphicsFixup.kext Lilu.kext Shiki.kext
++ FakePCIID_Intel_HD_Graphics.kext    FakePCIID.kext    IntelGraphicsFixup.kext    Lilu.kext    Shiki.kext
 
 For CPU PM (need to disable XCPM if you want HWP works well in kabylake cpu)
-+ NULLCPUPowerMangement.kext with FakeCPUID 0x0106e0
++ NULLCPUPowerMangement.kext    with FakeCPUID 0x0106e0
 
 For USB
 + USBInjectALL.kext
@@ -21,7 +21,7 @@ For keyboard and touchpad
 + VoodooPS2Controller.kext
 
 For Ethernet
-+ IntelMausiEthernet.kext RealtekRTL8111.kext
++ IntelMausiEthernet.kext    RealtekRTL8111.kext
 
 ## DSDT PATCHES
 ### In CLOVER DSDT PATCH
@@ -64,9 +64,10 @@ end;
 ## Not Working
 + mic 
 + wifi
-## Credit
++ sdcard reader
+## Credits
 + APPLE for mac os
-+ RehabMan for everything
-
++ RehabMan 
++ All Hacktonish devs
 
 
