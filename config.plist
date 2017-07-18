@@ -58,15 +58,6 @@
 			<key>ReuseFFFF</key>
 			<false/>
 		</dict>
-		<key>DropTables</key>
-		<array>
-			<dict>
-				<key>Signature</key>
-				<string>SSDT</string>
-				<key>TableId</key>
-				<string>CpuSsdt</string>
-			</dict>
-		</array>
 		<key>SSDT</key>
 		<dict>
 			<key>DropOem</key>
@@ -82,13 +73,12 @@
 		<key>SortedOrder</key>
 		<array>
 			<string>SSDT-PNLF.aml</string>
-			<string>SSDT.aml</string>
 		</array>
 	</dict>
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>dart=0 kext-dev-mode=1 -shikigva</string>
+		<string>-v dart=0 nv_disable=1 kext-dev-mode=1 -shikigva -disablegfxfirmware -lilubeta -igfxbeta -alcbeta</string>
 		<key>Debug</key>
 		<false/>
 		<key>DefaultVolume</key>
@@ -106,37 +96,17 @@
 	<dict>
 		<key>C6</key>
 		<true/>
-		<key>HWPEnable</key>
-		<true/>
-		<key>HWPValue</key>
-		<string>0x80002A01</string>
 		<key>UseARTFrequency</key>
-		<true/>
+		<false/>
 	</dict>
 	<key>Devices</key>
 	<dict>
 		<key>AddProperties</key>
-		<array>
-			<dict>
-				<key>Device</key>
-				<string>IntelGFX</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Key</key>
-				<string>AAPL,GfxYTile</string>
-				<key>Value</key>
-				<string>AQAAAA==</string>
-			</dict>
-		</array>
+		<array/>
 		<key>Audio</key>
 		<dict>
 			<key>Inject</key>
 			<string>28</string>
-		</dict>
-		<key>FakeID</key>
-		<dict>
-			<key>IntelGFX</key>
-			<string>0x19168086</string>
 		</dict>
 		<key>USB</key>
 		<dict>
@@ -198,7 +168,7 @@
 			<key>ATI</key>
 			<false/>
 			<key>Intel</key>
-			<true/>
+			<false/>
 			<key>NVidia</key>
 			<false/>
 		</dict>
@@ -206,8 +176,6 @@
 		<true/>
 		<key>NvidiaSingle</key>
 		<false/>
-		<key>ig-platform-id</key>
-		<string>0x191b0000</string>
 	</dict>
 	<key>KernelAndKextPatches</key>
 	<dict>
@@ -217,8 +185,6 @@
 		<false/>
 		<key>Debug</key>
 		<false/>
-		<key>FakeCPUID</key>
-		<string>0x0106e0</string>
 		<key>KernelCpu</key>
 		<true/>
 		<key>KernelHaswellE</key>
@@ -227,121 +193,6 @@
 		<true/>
 		<key>KernelPm</key>
 		<true/>
-		<key>KextsToPatch</key>
-		<array>
-			<dict>
-				<key>Comment</key>
-				<string>change F%uT%04x to F%uTxxxx in AppleBacklightInjector.kext (credit RehabMan)</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				RiV1VCUwNHgA
-				</data>
-				<key>Name</key>
-				<string>com.apple.driver.AppleBacklight</string>
-				<key>Replace</key>
-				<data>
-				RiV1VHh4eHgA
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>TRIM function for non-Apple SSDs</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				QVBQTEUgU1NEAA==
-				</data>
-				<key>Name</key>
-				<string>IOAHCIBlockStorage</string>
-				<key>Replace</key>
-				<data>
-				AAAAAAAAAAAAAA==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>10.12</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				g710////EA==
-				</data>
-				<key>Name</key>
-				<string>AppleUSBXHCIPCI</string>
-				<key>Replace</key>
-				<data>
-				g710////Gw==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>eDP, port 0000, 0x191e0000, 0x19160000, 0x19260000, 0x19270000, 0x191b0000, 0x19160002, 0x19260002, 0x191e0003, 0x19260004, 0x19270004, 0x193b0005 credit syscl</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				AAAIAAIAAACYAAAAAQUJAAAEAAA=
-				</data>
-				<key>Name</key>
-				<string>AppleIntelSKLGraphicsFramebuffer</string>
-				<key>Replace</key>
-				<data>
-				AAAIAAAEAACYAAAAAQUJAAAEAAA=
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Fix Hdmi</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				AAgAAIcBAAADBgoAAAQAAA==
-				</data>
-				<key>Name</key>
-				<string>AppleIntelSKLGraphicsFramebuffer</string>
-				<key>Replace</key>
-				<data>
-				AAgAAIcBAAADBgoAAAgAAA==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>DP TO VGA</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				AAQAAIcBAAACBAoAAAQAAA==
-				</data>
-				<key>Name</key>
-				<string>AppleIntelSKLGraphicsFramebuffer</string>
-				<key>Replace</key>
-				<data>
-				BAAAAIcBAAACBAoAQAAAAA==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Second Stage patch</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				AQAAdRc=
-				</data>
-				<key>Name</key>
-				<string>IOGraphicsFamily</string>
-				<key>Replace</key>
-				<data>
-				AQAAdBc=
-				</data>
-			</dict>
-		</array>
 	</dict>
 	<key>RtVariables</key>
 	<dict>
@@ -353,13 +204,13 @@
 	<key>SMBIOS</key>
 	<dict>
 		<key>BiosReleaseDate</key>
-		<string>12/22/2016</string>
+		<string>06/25/2017</string>
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
 		<key>BiosVersion</key>
-		<string>IM171.88Z.0105.B15.1612221002</string>
+		<string>IM183.88Z.0147.B01.1706251744</string>
 		<key>Board-ID</key>
-		<string>Mac-B809C3757DA9BB8D</string>
+		<string>Mac-BE088AF8C5EB4FA2</string>
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardType</key>
@@ -379,9 +230,9 @@
 		<key>Mobile</key>
 		<false/>
 		<key>ProductName</key>
-		<string>iMac17,1</string>
+		<string>iMac18,3</string>
 		<key>SerialNumber</key>
-		<string>C02QP0ZXH2YQ</string>
+		<string>C02TTN9VJ1GJ</string>
 		<key>Version</key>
 		<string>1.0</string>
 	</dict>

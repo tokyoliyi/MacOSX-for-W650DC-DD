@@ -9,11 +9,11 @@ For sound card
 + AppleALC.kext with  layout id 28
 
 For Intel graphics
-+ FakePCIID_Intel_HD_Graphics.kext    FakePCIID.kext    IntelGraphicsFixup.kext    Lilu.kext    Shiki.kext
++  IntelGraphicsFixup.kext   
++  Lilu.kext    
++ Shiki.kext
 
-For CPU PM (need to disable XCPM if you want HWP works well in kabylake cpu)
-+ NULLCPUPowerMangement.kext    with FakeCPUID 0x0106e0
-
+For CPU PM (In 10.13 we have native support)
 For USB
 + USBInjectALL.kext
 
@@ -48,19 +48,19 @@ begin
                     {
                         Notify (PS2K, 0x0405)
                     }
-
+    
                     If (LEqual (Local0, 0x03))
                     {
                         Notify (PS2K, 0x0406)
                     }
-
+    
                     Store (0x02, OEM2)
 end;
 </pre></code>
 ## Notice
 + You need to generate and patch DSDT by yourself
 + Use ssdtPRGen.sh to generate SSDT for your CPU
-+ You can use clover config from me
++ You can use clover config directly.
 ## Not Working
 + mic 
 + wifi
