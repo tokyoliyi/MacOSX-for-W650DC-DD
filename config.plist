@@ -106,7 +106,7 @@
 		<key>Audio</key>
 		<dict>
 			<key>Inject</key>
-			<string>28</string>
+			<string>29</string>
 		</dict>
 		<key>USB</key>
 		<dict>
@@ -168,7 +168,7 @@
 			<key>ATI</key>
 			<false/>
 			<key>Intel</key>
-			<false/>
+			<true/>
 			<key>NVidia</key>
 			<false/>
 		</dict>
@@ -176,6 +176,8 @@
 		<true/>
 		<key>NvidiaSingle</key>
 		<false/>
+		<key>ig-platform-id</key>
+		<string>0x591b0000</string>
 	</dict>
 	<key>KernelAndKextPatches</key>
 	<dict>

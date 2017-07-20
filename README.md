@@ -1,4 +1,4 @@
-# MacOSX 10.12.5 for w650dc/dd
+# MacOSX 10.13 for w650dc/dd
 
 ## About kexts
 
@@ -6,12 +6,12 @@ For battery
 + ACPIBatteryManager.kext
 
 For sound card
-+ AppleALC.kext with  layout id 28
++ AppleALC.kext with  layout id 29
 
 For Intel graphics
 +  IntelGraphicsFixup.kext   
 +  Lilu.kext    
-+ Shiki.kext
++  Shiki.kext
 
 For CPU PM (In 10.13 we have native support)
 For USB
@@ -37,7 +37,7 @@ Disable GTX950m
 + [gfx0] Disable/Enable on _WAK/_PTS (DSDT)
 
 Fix instant wake
-+ [usb] USB3 _PRW 0x0D Skylake (instant wake)
++ [usb] USB3 _PRW 0x6D Skylake (instant wake)
 ### FN Brightness key patch
 <pre><code>
 into method label _Q12 parent_label EC replace_content
@@ -62,9 +62,9 @@ end;
 + Use ssdtPRGen.sh to generate SSDT for your CPU
 + You can use clover config directly.
 ## Not Working
-+ mic 
 + wifi
 + sdcard reader
++ HDMI
 ## Credits
 + APPLE for mac os
 + RehabMan 
