@@ -28,6 +28,7 @@ For Ethernet
 + change GFX0 to IGPU
 + change HDAS to HDEF
 + change HECI to IMEI
+
 ### PATCH DSDT (Use Laptop Patches maintained by RehabMan)
 Enable AppleLPC
 + [sys] Skylake LPC
@@ -57,14 +58,16 @@ begin
                     Store (0x02, OEM2)
 end;
 </pre></code>
+
 ## Notice
 + You need to generate and patch DSDT by yourself
-+ Use ssdtPRGen.sh to generate SSDT for your CPU
 + You can use clover config directly.
+
 ## Not Working
 + wifi
 + sdcard reader
 + HDMI
+
 ## Credits
 + APPLE for mac os
 + RehabMan 
