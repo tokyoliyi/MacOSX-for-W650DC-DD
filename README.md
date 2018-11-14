@@ -66,7 +66,6 @@ end;
 ## Not Working
 + wifi
 + sdcard reader
-+ HDMI
 
 ## Credits
 + APPLE for mac os
