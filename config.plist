@@ -156,6 +156,8 @@
 	</dict>
 	<key>CPU</key>
 	<dict>
+		<key>C4</key>
+		<false/>
 		<key>HWPEnable</key>
 		<false/>
 		<key>Type</key>
@@ -185,7 +187,7 @@
 		<key>Audio</key>
 		<dict>
 			<key>Inject</key>
-			<string>29</string>
+			<integer>29</integer>
 		</dict>
 		<key>FakeID</key>
 		<dict>
@@ -439,7 +441,7 @@
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardSerialNumber</key>
-		<string>C02524300GUF116CB</string>
+		<string>C026264034NGPF7FB</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
@@ -467,7 +469,9 @@
 		<key>ProductName</key>
 		<string>iMac17,1</string>
 		<key>SerialNumber</key>
-		<string>C02PV2B4GG7L</string>
+		<string>C02RX8Z1GG7L</string>
+		<key>SmUUID</key>
+		<string>9CF938C9-63B3-4C63-9704-AFF445C66C44</string>
 		<key>Version</key>
 		<string>1.0</string>
 	</dict>
